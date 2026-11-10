@@ -23,6 +23,24 @@ Kalian yang menambahkan AI-nya, tahap demi tahap, dengan bantuan Claude Code.
 | Satu tool contoh (`cari_produk`) | RAG dari dokumen SOP |
 | Tes penerimaan dan kartu untuk tiap tahap | Satu fitur AI pilihan di layar ERP |
 
+## Mulai cepat: semua di laptop sendiri
+
+Butuh **Python 3.10+**, **Docker Desktop**, **Ollama**, dan **Claude Code**. Database, embedding, dan aplikasinya jalan di laptopmu. Hanya model chat yang lewat internet (Claude Haiku, dengan API key dari mentor).
+
+```bash
+git clone https://github.com/aditya39/erp-ai-template.git
+cd erp-ai-template
+docker compose up -d                  # database dummy; cek siap: docker compose ps (healthy)
+ollama pull bge-m3                    # model embedding untuk RAG (±1,2 GB), sekali saja
+python3 -m venv .venv                 # Windows: py -m venv .venv
+source .venv/bin/activate             # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env                  # Windows: copy .env.example .env
+```
+
+Buka `.env`, tempel blok **PROFIL (d)** di bagian bawah, isi `LOKAL_API_KEY` dan `RAG_KOLEKSI`. Lalu `python scripts/cek_setup.py` (semua ✓) dan `python -m web`.
+Unduh image Docker dan model Ollama **sebelum hari H**, di rumah atau kantor. Di ruang workshop unduhan bersamaan akan lambat.
+
 ## Persiapan
 
 ```bash
