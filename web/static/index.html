@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nusantara Rasa ERP mini</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/vendor/chart.umd.js"></script>
+</head>
+<body>
+  <div class="app ai-buka" id="app">
+    <nav class="sidebar" aria-label="Navigasi utama">
+      <a class="ruang-kerja">
+        <span class="logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3.5c3.7 2.9 5.8 6.2 5.8 9.6 0 3.8-2.6 6.8-5.8 7.4-3.2-.6-5.8-3.6-5.8-7.4 0-3.4 2.1-6.7 5.8-9.6Z" /><path d="M12 8.5v12" /><path d="M12 13l2.8-2.2M12 16.6l-2.8-2.2" />
+          </svg>
+        </span>
+        <span class="ruang-teks"><b>Nusantara Rasa</b><small id="perusahaan">ERP mini</small></span>
+      </a>
+      <div class="nav" id="nav"></div>
+      <div class="sidebar-bawah">Template workshop.<br>Semua data fiktif.</div>
+    </nav>
+
+    <div class="utama">
+      <header class="topbar">
+        <nav class="remah" id="remah" aria-label="Breadcrumb"></nav>
+        <div class="topbar-kanan">
+          <label class="masuk-sebagai"><span>Masuk sebagai</span><select id="pengguna"></select></label>
+          <button class="btn btn-asisten aktif" id="tombol-asisten"></button>
+        </div>
+      </header>
+      <main class="konten"><div class="konten-isi" id="halaman"></div></main>
+    </div>
+
+    <aside class="ai-panel terbuka" id="ai-panel" aria-label="Asisten">
+      <header class="ai-head">
+        <div class="ai-identitas">
+          <span class="ai-logo" id="ai-logo"></span>
+          <div><b>Asisten</b><small id="model-aktif"></small></div>
+        </div>
+        <div class="ai-head-aksi">
+          <div class="segmen" id="mode" role="group" aria-label="Model">
+            <button data-mode="lokal" class="aktif">Lokal</button>
+            <button data-mode="cloud">Cloud</button>
+          </div>
+          <button class="btn-ikon" id="bersihkan" title="Percakapan baru" aria-label="Percakapan baru"></button>
+          <button class="btn-ikon" id="tutup-asisten" title="Tutup" aria-label="Tutup"></button>
+        </div>
+      </header>
+      <div class="ai-pita" id="ai-pita"></div>
+      <div class="ai-isi" id="messages"></div>
+      <footer class="ai-tulis">
+        <form class="ai-input" id="composer">
+          <textarea id="input" rows="1" placeholder="Tanyakan penjualan, HPP, atau kebijakan…"></textarea>
+          <button type="submit" class="ai-kirim" id="kirim" aria-label="Kirim"></button>
+        </form>
+        <small class="ai-catatan">Mengikuti hak akses Anda. Periksa kembali sebelum dipakai untuk keputusan.</small>
+      </footer>
+    </aside>
+  </div>
+
+  <script src="/static/ikon.js"></script>
+  <script src="/static/app.js"></script>
+  <script src="/static/halaman.js"></script>
+  <script>mulai();</script>
+</body>
+</html>
