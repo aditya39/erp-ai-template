@@ -34,7 +34,7 @@ cp .env.example .env                 # Windows: copy .env.example .env
 
 Isi `.env`:
 
-1. Tempel blok **profil (b)** dari mentor di bagian bawah file (alamat server workshop).
+1. Tempel blok dari mentor di bagian bawah file. Isinya alamat server workshop (database, embedding, ERP) dan, kalau workshop memakai API, model chat Claude Haiku dengan key kelompok (profil (b) + (c) di `.env.example`). Kalau blok itu sudah memuat `LOKAL_*` yang menunjuk ke Haiku, langkah 3 di bawah boleh dilewati.
 2. Isi `RAG_KOLEKSI` dengan nama unik untuk pasangan kalian, huruf kecil tanpa spasi, misalnya `budi_sari`. Kalau blok dari mentor sudah berisi baris `RAG_KOLEKSI=`, isi di baris itu, karena baris paling bawah yang terbaca.
 3. Isi `CLOUD_BASE_URL`, `CLOUD_MODEL`, dan `CLOUD_API_KEY` dengan key kelompok dari mentor, supaya tombol **Cloud** di panel Asisten aktif. Contohnya ada di `.env.example`.
 
